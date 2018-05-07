@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Web;
 
 namespace Movidly.Models
@@ -9,6 +10,9 @@ namespace Movidly.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public bool IsSubscribedToNewsLetter { get; set; }
+        public MembershipType MembershipType { get; set; }
+        public byte MembershipTypeId { get; set; }
 
     }
 }
