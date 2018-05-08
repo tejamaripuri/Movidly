@@ -255,9 +255,42 @@
     <Compile Include="Migrations\201805081603504_AddBirthdayToCustomer1.Designer.cs">
       <DependentUpon>201805081603504_AddBirthdayToCustomer1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805081644421_AddMovieDetails.cs" />
+    <Compile Include="Migrations\201805081644421_AddMovieDetails.Designer.cs">
+      <DependentUpon>201805081644421_AddMovieDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805081646209_AddMovieDetails1.cs" />
+    <Compile Include="Migrations\201805081646209_AddMovieDetails1.Designer.cs">
+      <DependentUpon>201805081646209_AddMovieDetails1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805081649550_AddMovieGenres.cs" />
+    <Compile Include="Migrations\201805081649550_AddMovieGenres.Designer.cs">
+      <DependentUpon>201805081649550_AddMovieGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805081654522_PopulateMovieGenres.cs" />
+    <Compile Include="Migrations\201805081654522_PopulateMovieGenres.Designer.cs">
+      <DependentUpon>201805081654522_PopulateMovieGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805081725343_AddMovieDetails2.cs" />
+    <Compile Include="Migrations\201805081725343_AddMovieDetails2.Designer.cs">
+      <DependentUpon>201805081725343_AddMovieDetails2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805081728414_AddMovieDetails3.cs" />
+    <Compile Include="Migrations\201805081728414_AddMovieDetails3.Designer.cs">
+      <DependentUpon>201805081728414_AddMovieDetails3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805081732343_AddMovieDetails4.cs" />
+    <Compile Include="Migrations\201805081732343_AddMovieDetails4.Designer.cs">
+      <DependentUpon>201805081732343_AddMovieDetails4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805081750357_AddMovieDetails5.cs" />
+    <Compile Include="Migrations\201805081750357_AddMovieDetails5.Designer.cs">
+      <DependentUpon>201805081750357_AddMovieDetails5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -339,6 +372,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -383,6 +417,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805081603504_AddBirthdayToCustomer1.resx">
       <DependentUpon>201805081603504_AddBirthdayToCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805081644421_AddMovieDetails.resx">
+      <DependentUpon>201805081644421_AddMovieDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805081646209_AddMovieDetails1.resx">
+      <DependentUpon>201805081646209_AddMovieDetails1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805081649550_AddMovieGenres.resx">
+      <DependentUpon>201805081649550_AddMovieGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805081654522_PopulateMovieGenres.resx">
+      <DependentUpon>201805081654522_PopulateMovieGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805081725343_AddMovieDetails2.resx">
+      <DependentUpon>201805081725343_AddMovieDetails2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805081728414_AddMovieDetails3.resx">
+      <DependentUpon>201805081728414_AddMovieDetails3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805081732343_AddMovieDetails4.resx">
+      <DependentUpon>201805081732343_AddMovieDetails4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805081750357_AddMovieDetails5.resx">
+      <DependentUpon>201805081750357_AddMovieDetails5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

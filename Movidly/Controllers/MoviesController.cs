@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,6 +13,19 @@ namespace Movidly.Controllers
 {
     public class MoviesController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
+
         // GET: Movies/Random
         public ActionResult Random()
         {
@@ -34,17 +48,20 @@ namespace Movidly.Controllers
         // /movies
         public ViewResult Index()
         {
-            var movies = GetMovies();
+            var movies = _context.Movies.Include(m => m.Genre).ToList();
             return View(movies);
         }
 
-        public IEnumerable<Movie> GetMovies()
+        public ActionResult Details(int id)
         {
-            return new List<Movie>
+            var movies = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
+
+            if (movies == null)
             {
-                new Movie{ Id = 1, Name = "Shrek!!"},
-                new Movie{ Id = 1, Name = "Wall-e"}
-            };
+                return HttpNotFound();
+            }
+            return View(movies);
         }
+
     }
 }
