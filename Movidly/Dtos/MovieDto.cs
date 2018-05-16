@@ -25,5 +25,7 @@ namespace Movidly.Dtos
 
         [Required]
         public byte GenreId { get; set; }
+
+        public GenreDto Genre;
     }
 }

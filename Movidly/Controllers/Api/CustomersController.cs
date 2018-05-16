@@ -28,7 +28,7 @@ namespace Movidly.Controllers.Api
                 .ToList()
                 .Select(Mapper.Map<Customer, CustomerDto>);
 
-            return _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);
+            return customersDtos;
         }
 
         // GET  /api/customers/1
