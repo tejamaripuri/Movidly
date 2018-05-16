@@ -48,8 +48,9 @@ namespace Movidly.Controllers
         // /movies
         public ViewResult Index()
         {
-            var movies = _context.Movies.Include(m => m.Genre).ToList();
-            return View(movies);
+            if(User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
+            return View("ReadOnlyList");
         }
 
         public ActionResult Details(int id)
@@ -63,6 +64,7 @@ namespace Movidly.Controllers
             return View(movies);
         }
 
+        [Authorize(Roles= RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
