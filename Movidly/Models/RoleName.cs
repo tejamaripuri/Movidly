@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Movidly.Models
 {
-    public class RoleName
+    public static class RoleName
     {
         public const string CanManageMovies = "CanManageMovies";
     }
