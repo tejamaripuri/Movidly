@@ -25,8 +25,9 @@ namespace Movidly.Controllers.Api
 
             var movies = _context.Movies.Where(m => newRental.MovieIds.Contains(m.Id)).ToList();
 
-            if (movies.Count == newRental.MovieIds.Count)
+            if (movies.Count != newRental.MovieIds.Count)
                 return BadRequest("One or More Movies are Invalid.");
+                
 
             foreach (var movie in movies)
             {

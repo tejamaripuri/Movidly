@@ -21,10 +21,15 @@ namespace Movidly.Controllers.Api
         }
 
         // GET  /api/customers
-        public IEnumerable<CustomerDto> GetCustomers()
+        public IEnumerable<CustomerDto> GetCustomers(string query = null)
         {
-            var customersDtos = _context.Customers
-                .Include(c => c.MembershipType)
+            var customerQuery = _context.Customers
+                .Include(c => c.MembershipType);
+
+            if (!String.IsNullOrWhiteSpace(query))
+                customerQuery = customerQuery.Where(c => c.Name.Contains(query));
+
+            var customersDtos = customerQuery
                 .ToList()
                 .Select(Mapper.Map<Customer, CustomerDto>);
 
