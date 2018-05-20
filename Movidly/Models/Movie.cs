@@ -24,6 +24,8 @@ namespace Movidly.Models
         [Display(Name = "Number In Stock")]
         public int NumberInStock { get; set; }
 
+        public int NumberAvailable { get; set; }
+
         public Genre Genre { get; set; }
 
         [Required]
